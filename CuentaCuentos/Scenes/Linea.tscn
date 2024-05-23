@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://k631k6rh0v74"]
+
+[node name="Linea" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="PosA" type="Line2D" parent="."]
+position = Vector2(143, 89)
+points = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+width = 6.0
+default_color = Color(0.309804, 0.364706, 0.882353, 1)
+metadata/_edit_lock_ = true
+
+[node name="PosB" type="Line2D" parent="."]
+position = Vector2(143, 123)
+points = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+width = 6.0
+default_color = Color(0.27451, 0.529412, 0.627451, 1)
+metadata/_edit_lock_ = true
+
+[node name="PosC" type="Node2D" parent="."]
+position = Vector2(3, 19)
+metadata/_edit_lock_ = true

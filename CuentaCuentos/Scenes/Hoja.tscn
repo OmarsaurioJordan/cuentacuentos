@@ -1,0 +1,298 @@
+[gd_scene load_steps=6 format=3 uid="uid://cihjdsgpw7mvl"]
+
+[ext_resource type="Script" path="res://Scripts/Hoja.gd" id="1_4ltgn"]
+[ext_resource type="FontFile" uid="uid://cd1ckfx8v10ix" path="res://Sprites/comic_sana.ttf" id="2_gbobx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14yl2"]
+bg_color = Color(0.831373, 0.807843, 0.282353, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_asnt2"]
+bg_color = Color(0.803922, 0.803922, 0.803922, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3rf1"]
+bg_color = Color(0.756863, 0.756863, 0.756863, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[node name="Hoja" type="Control" groups=["Hojas"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 145.0
+offset_bottom = 172.0
+script = ExtResource("1_4ltgn")
+metadata/_edit_lock_ = true
+
+[node name="Selection" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 149.0
+offset_bottom = 147.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_14yl2")
+metadata/_edit_lock_ = true
+
+[node name="Fondo" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 145.0
+offset_bottom = 143.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_asnt2")
+metadata/_edit_lock_ = true
+
+[node name="Indice" type="Label" parent="."]
+layout_mode = 0
+offset_top = 6.0
+offset_right = 31.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 16
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="TextEdit" parent="Indice"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -3.0
+offset_right = 252.0
+offset_bottom = 135.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_readonly_color = Color(0.141176, 0.141176, 0.141176, 1)
+theme_override_colors/font_placeholder_color = Color(0.494118, 0.494118, 0.494118, 1)
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/read_only = SubResource("StyleBoxFlat_d3rf1")
+placeholder_text = "título"
+editable = false
+wrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Contenido" type="TextEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 26.0
+offset_top = 33.0
+offset_right = 258.0
+offset_bottom = 111.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_readonly_color = Color(0.141176, 0.141176, 0.141176, 1)
+theme_override_colors/font_placeholder_color = Color(0.494118, 0.494118, 0.494118, 1)
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/read_only = SubResource("StyleBoxFlat_d3rf1")
+placeholder_text = "contenido"
+editable = false
+wrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Conteo" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 91.0
+offset_right = 98.0
+offset_bottom = 139.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_readonly_color = Color(0.141176, 0.141176, 0.141176, 1)
+theme_override_colors/font_placeholder_color = Color(0.494118, 0.494118, 0.494118, 1)
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/read_only = SubResource("StyleBoxFlat_d3rf1")
+text = "0"
+editable = false
+metadata/_edit_lock_ = true
+
+[node name="OptionA" type="Label" parent="."]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 80.0
+offset_right = 144.0
+offset_bottom = 103.0
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 16
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Subtext" type="TextEdit" parent="OptionA"]
+visible = false
+layout_mode = 0
+offset_left = -110.0
+offset_top = -6.0
+offset_right = 110.0
+offset_bottom = 58.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_readonly_color = Color(0.141176, 0.141176, 0.141176, 1)
+theme_override_colors/font_placeholder_color = Color(0.494118, 0.494118, 0.494118, 1)
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/read_only = SubResource("StyleBoxFlat_d3rf1")
+placeholder_text = "opción A"
+editable = false
+wrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Conteo" type="TextEdit" parent="OptionA"]
+layout_mode = 0
+offset_left = -55.0
+offset_top = 1.0
+offset_right = 49.0
+offset_bottom = 47.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_readonly_color = Color(0.141176, 0.141176, 0.141176, 1)
+theme_override_colors/font_placeholder_color = Color(0.494118, 0.494118, 0.494118, 1)
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/read_only = SubResource("StyleBoxFlat_d3rf1")
+text = "A: 0"
+placeholder_text = "A: "
+editable = false
+metadata/_edit_lock_ = true
+
+[node name="PosA" type="Node2D" parent="OptionA"]
+position = Vector2(30, 10)
+metadata/_edit_lock_ = true
+
+[node name="OptionB" type="Label" parent="."]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 114.0
+offset_right = 144.0
+offset_bottom = 137.0
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 16
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Subtext" type="TextEdit" parent="OptionB"]
+visible = false
+layout_mode = 0
+offset_left = -110.0
+offset_top = -6.0
+offset_right = 110.0
+offset_bottom = 58.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_readonly_color = Color(0.141176, 0.141176, 0.141176, 1)
+theme_override_colors/font_placeholder_color = Color(0.494118, 0.494118, 0.494118, 1)
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/read_only = SubResource("StyleBoxFlat_d3rf1")
+placeholder_text = "opción B"
+editable = false
+wrap_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Conteo" type="TextEdit" parent="OptionB"]
+layout_mode = 0
+offset_left = -55.0
+offset_top = 1.0
+offset_right = 49.0
+offset_bottom = 47.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_readonly_color = Color(0.141176, 0.141176, 0.141176, 1)
+theme_override_colors/font_placeholder_color = Color(0.494118, 0.494118, 0.494118, 1)
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/read_only = SubResource("StyleBoxFlat_d3rf1")
+text = "B: 0"
+placeholder_text = "B: "
+editable = false
+metadata/_edit_lock_ = true
+
+[node name="PosB" type="Node2D" parent="OptionB"]
+position = Vector2(30, 10)
+metadata/_edit_lock_ = true
+
+[node name="PosC" type="Node2D" parent="."]
+position = Vector2(3, 19)
+metadata/_edit_lock_ = true
+
+[node name="BotSelect" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0.00392157)
+layout_mode = 0
+offset_left = 32.0
+offset_right = 145.0
+offset_bottom = 75.0
+focus_mode = 0
+metadata/_edit_lock_ = true
+
+[node name="BotHalar1" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0.00392157)
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 143.0
+focus_mode = 0
+keep_pressed_outside = true
+metadata/_edit_lock_ = true
+
+[node name="BotHalar2" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0.00392157)
+layout_mode = 0
+offset_left = 26.0
+offset_top = 75.0
+offset_right = 54.0
+offset_bottom = 143.0
+focus_mode = 0
+keep_pressed_outside = true
+metadata/_edit_lock_ = true
+
+[node name="BotConexA" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0.00392157)
+layout_mode = 0
+offset_left = 54.0
+offset_top = 77.0
+offset_right = 145.0
+offset_bottom = 108.0
+focus_mode = 0
+keep_pressed_outside = true
+metadata/_edit_lock_ = true
+
+[node name="BotConexB" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0.00392157)
+layout_mode = 0
+offset_left = 54.0
+offset_top = 112.0
+offset_right = 145.0
+offset_bottom = 141.0
+focus_mode = 0
+keep_pressed_outside = true
+metadata/_edit_lock_ = true
+
+[node name="Listo" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 117.0
+offset_right = 50.0
+offset_bottom = 143.0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.619608, 0.619608, 0.619608, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_gbobx")
+theme_override_font_sizes/font_size = 12
+text = "Ok"
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="BotSelect" to="." method="_on_bot_select_pressed"]
+[connection signal="button_down" from="BotHalar1" to="." method="_on_bot_halar_button_down"]
+[connection signal="button_up" from="BotHalar1" to="." method="_on_bot_halar_button_up"]
+[connection signal="button_down" from="BotHalar2" to="." method="_on_bot_halar_button_down"]
+[connection signal="button_up" from="BotHalar2" to="." method="_on_bot_halar_button_up"]
+[connection signal="button_down" from="BotConexA" to="." method="_on_bot_conex_a_button_down"]
+[connection signal="button_up" from="BotConexA" to="." method="_on_bot_conex_a_button_up"]
+[connection signal="button_down" from="BotConexB" to="." method="_on_bot_conex_b_button_down"]
+[connection signal="button_up" from="BotConexB" to="." method="_on_bot_conex_b_button_up"]
+[connection signal="toggled" from="Listo" to="." method="_on_listo_toggled"]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://qh61pm7217ve"]
+
+[node name="Linux" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="Pos" type="Line2D" parent="."]
+position = Vector2(27, 12)
+points = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+width = 6.0
+metadata/_edit_lock_ = true

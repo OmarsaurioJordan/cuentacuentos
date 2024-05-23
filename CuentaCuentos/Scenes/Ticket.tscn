@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://caqwv0ocy7js3"]
+
+[ext_resource type="Script" path="res://Scripts/Ticket.gd" id="1_63a6l"]
+[ext_resource type="FontFile" uid="uid://cd1ckfx8v10ix" path="res://Sprites/comic_sana.ttf" id="2_mcsb7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wuomv"]
+bg_color = Color(0.831373, 0.807843, 0.282353, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Ticket" type="Control" groups=["Tickets"]]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 32.0
+offset_bottom = 24.0
+script = ExtResource("1_63a6l")
+metadata/_edit_lock_ = true
+
+[node name="Selection" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 35.0
+offset_bottom = 27.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wuomv")
+metadata/_edit_lock_ = true
+
+[node name="Fondo" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 24.0
+metadata/_edit_lock_ = true
+
+[node name="Indice" type="Label" parent="."]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_mcsb7")
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="BotHalar" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0.00392157)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 31.0
+offset_bottom = 22.0
+focus_mode = 0
+keep_pressed_outside = true
+metadata/_edit_lock_ = true
+
+[connection signal="button_down" from="BotHalar" to="." method="_on_bot_halar_button_down"]
+[connection signal="button_up" from="BotHalar" to="." method="_on_bot_halar_button_up"]
