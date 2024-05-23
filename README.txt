@@ -55,3 +55,4 @@ esta es una versión preliminar, aún no exportada por lo que requiere Godot 4.2
 
 Licencia:
 este software es de libre uso y modificación para proyectos personales NO comerciales, y deben darse créditos a Omwekiatl en caso de alguna publicación. Para otros usos, comunicarse al correo ojorcio@gmail.com
+Cualquier cuento creado es SU propiedad intelectual, pero si va a vender o monetizar el código, el proyecto, un exportable digital, en ese caso se aplican las reglas de licencia descritas arriba.
